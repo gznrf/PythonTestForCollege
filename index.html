@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="script" href="./scripts.js">
+    <title>PyTest</title>
+</head>
+<body>
+    <h1>Тест на знание языка Python</h1>
+    <table border="1" id="q1">
+        <tr>
+            <td rowspan="3">1</td>
+            <td colspan="4" class="task">
+                Имеется кортеж вида T = (4, 2, 3). Какая из операций приведёт к тому, что имя T будет ссылаться на кортеж (1, 2, 3)?
+            </td>
+        </tr>
+        <tr>
+            <td class="variant">1) T[0] = 1</td>
+            <td class="variant">2) T = (1) + T[1:]</td>
+            <td class="variant">3) T = (1,) + T[1:]</td>
+            <td class="variant">4) T.startswith(1)</td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <input id="a1" type="text" class="answer" placeholder="Ответ" />
+            </td>
+        </tr>
+    </table>
+    <button onclick="Check()">Проверить</button>
+    <p>Разработчик:
+        Мусиенко Иван
+    </p>
+
+</body>
+</html>
