@@ -1,0 +1,20 @@
+.variant
+{
+    text-align: center;
+    font-size: 18px;
+
+
+}
+
+
+.task
+{
+    font-size: 22px;
+    width: 100%;
+    text-align: justify;
+}
+
+.question{
+    margin-bottom: 30px;
+    margin: 0px 100px 30px 0px;
+}

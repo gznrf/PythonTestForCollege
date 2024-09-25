@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
-    <link rel="script" href="./scripts.js">
     <title>PyTest</title>
 </head>
 <body>
     <h1>Тест на знание языка Python</h1>
-    <table border="1" id="q1">
+    <table border="1" id="q1" class="question">
         <tr>
             <td rowspan="3">1</td>
             <td colspan="4" class="task">
@@ -28,7 +27,134 @@
             </td>
         </tr>
     </table>
-    <button onclick="Check()">Проверить</button>
+
+    <table border="1" id="q2" class="question">
+        <tr>
+            <td rowspan="3">2</td>
+            <td colspan="4" class="task">
+                Для чего в Python используется встроенная функция enumerate()?
+            </td>
+        </tr>
+        <tr>
+            <td class="variant">1) Для определения количества элементов последовательности.</td>
+            <td class="variant">2) Для одновременного итерирования по самим элементам и их индексам.</td>
+            <td class="variant">3) Для сортировки элементов по значениям id.</td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <input id="a2" type="text" class="answer" placeholder="Ответ" />
+            </td>
+        </tr>
+    </table>
+    <table border="1" id="q3" class="question">
+        <tr>
+            <td rowspan="3">3</td>
+            <td colspan="4" class="task">
+                Необходимо собрать и вывести все уникальные слова из строки рекламного текста. Какой из перечисленных типов данных Python подходит лучше всего?
+            </td>
+        </tr>
+        <tr>
+            <td class="variant">1) кортеж (tuple)</td>
+            <td class="variant">2) список (list)</td>
+            <td class="variant">3) множество (set)</td>
+            <td class="variant">4) словарь (dict)</td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <input id="a3" type="text" class="answer" placeholder="Ответ" />
+            </td>
+        </tr>
+    </table>
+
+    <table border="1" id="q4" class="question">
+        <tr>
+            <td rowspan="3">4</td>
+            <td colspan="4" class="task">
+                Как вывести список методов и атрибутов объекта x?
+            </td>
+        </tr>
+        <tr>
+            <td class="variant">1) help(x)</td>
+            <td class="variant">2) info(x)</td>
+            <td class="variant">3) ?x</td>
+            <td class="variant">4) dir(x)</td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <input id="a4" type="text" class="answer" placeholder="Ответ" />
+            </td>
+        </tr>
+    </table>
+
+    <table border="1" id="q5" class="question">
+        <tr>
+            <td rowspan="3">5</td>
+            <td colspan="4" class="task">
+                Какая из перечисленных инструкций выполнится быстрее всего, если n = 10**6?
+            </td>
+        </tr>
+        <tr>
+            <td class="variant">1) a = list(i for i in range(n))</td>
+            <td class="variant">2) a = [i for i in range(n)]</td>
+            <td class="variant">3) a = (i for i in range(n))</td>
+            <td class="variant">4) a = {i for i in range(n)}</td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <input id="a5" type="text" class="answer" placeholder="Ответ" />
+            </td>
+        </tr>
+    </table>
+    <script>
+        function Check() {
+            let q1 = document.getElementById('q1');
+            let a1 = document.getElementById('a1');
+
+            if (a1.value == '3') {
+                q1.style.border = '1px solid green ';
+                document.getElementById('a1').disabled = true;
+            }else {
+                q1.style.border = '1px solid red';
+                document.getElementById('a1').disabled = true;
+            }
+
+            if(a2.value == '2'){
+                q2.style.border = '1px solid green ';
+                document.getElementById('a2').disabled = true;
+            }else {
+                q2.style.border = '1px solid red';
+                document.getElementById('a2').disabled = true;
+            }
+
+            if(a3.value == '3'){
+                q3.style.border = '1px solid green ';
+                document.getElementById('a3').disabled = true;
+            }else {
+                q3.style.border = '1px solid red';
+                document.getElementById('a3').disabled = true;
+            }
+
+            if(a4.value == '4'){
+                q4.style.border = '1px solid green ';
+                document.getElementById('a4').disabled = true;
+            }else {
+                q4.style.border = '1px solid red';
+                document.getElementById('a4').disabled = true;
+            }
+
+            if(a5.value == '3'){
+                q5.style.border = '1px solid green ';
+                document.getElementById('a5').disabled = true;
+            }else {
+                q5.style.border = '1px solid red';
+                document.getElementById('a5').disabled = true;
+            }
+
+        }
+    </script>
+
+    <button onclick="Check()" id="ResultBtn">Проверить</button>
+    <button onclick="window.location.reload()" id="RestartBtn">Начать заново</button>
     <p>Разработчик:
         Мусиенко Иван
     </p>
