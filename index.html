@@ -109,10 +109,12 @@
         function Check() {
             let q1 = document.getElementById('q1');
             let a1 = document.getElementById('a1');
+            let count = 0;
 
             if (a1.value == '3') {
                 q1.style.border = '1px solid green ';
                 document.getElementById('a1').disabled = true;
+                count++;
             }else {
                 q1.style.border = '1px solid red';
                 document.getElementById('a1').disabled = true;
@@ -121,6 +123,7 @@
             if(a2.value == '2'){
                 q2.style.border = '1px solid green ';
                 document.getElementById('a2').disabled = true;
+                count++;
             }else {
                 q2.style.border = '1px solid red';
                 document.getElementById('a2').disabled = true;
@@ -129,6 +132,7 @@
             if(a3.value == '3'){
                 q3.style.border = '1px solid green ';
                 document.getElementById('a3').disabled = true;
+                count++;
             }else {
                 q3.style.border = '1px solid red';
                 document.getElementById('a3').disabled = true;
@@ -137,6 +141,7 @@
             if(a4.value == '4'){
                 q4.style.border = '1px solid green ';
                 document.getElementById('a4').disabled = true;
+                count++;
             }else {
                 q4.style.border = '1px solid red';
                 document.getElementById('a4').disabled = true;
@@ -145,14 +150,15 @@
             if(a5.value == '3'){
                 q5.style.border = '1px solid green ';
                 document.getElementById('a5').disabled = true;
+                count++;
             }else {
                 q5.style.border = '1px solid red';
                 document.getElementById('a5').disabled = true;
             }
-
+            document.getElementById("resultVal").innerHTML = 'У вас ' + count + '/5 баллов';
         }
     </script>
-
+    <h1 id="resultVal"></h1>
     <button onclick="Check()" id="ResultBtn">Проверить</button>
     <button onclick="window.location.reload()" id="RestartBtn">Начать заново</button>
     <p>Разработчик:
